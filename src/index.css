@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  overflow-x: hidden;
+}
+@font-face {
+  font-family: "SF Pro Display";
+  src: local("SF Pro Display"),
+    url(./fonts/SFPRODISPLAYREGULAR.OTF) format("truetype");
+}
+#root {
+  width: 100vw; /* Set width to viewport width */
+  height: 100vh; /* Set height to viewport height */
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
