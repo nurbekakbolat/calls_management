@@ -56,7 +56,7 @@ export function Sbar() {
         position: "sticky",
         top: 0,
         overflow: "auto",
-        backgroundColor: "#091336",
+        background: "#091336",
         opacity: 1,
       }}
     >

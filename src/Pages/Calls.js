@@ -3,21 +3,19 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import { NativeSelect, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import InputBase from "@mui/material/InputBase";
 import { BiSearchAlt2 } from "react-icons/bi";
-import { BsChevronLeft, BsChevronRight, BsCalendar } from "react-icons/bs";
+
 import { RiArrowDropDownLine } from "react-icons/ri";
-import { AiFillPlusCircle } from "react-icons/ai";
 
 import { MdCallReceived, MdCallMade } from "react-icons/md";
 import IconButton from "@mui/material/IconButton";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
+
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
@@ -25,7 +23,7 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import Divider from "@mui/material/Divider";
+
 import axios from "axios";
 import Topbar from "../Components/Topbar";
 import Filterbar from "../Components/Filtersbar";
@@ -34,7 +32,7 @@ import data from "../SampleData.json";
 function Calls() {
   const [calls, setCalls] = useState([]);
   const [tempCalls, setTempCalls] = useState([]);
-  const [openTypes, setOpenTypes] = useState(false);
+
   const [anchorEl, setAnchorEl] = useState(null);
   const [typeCaption, setTypeCaption] = useState("Все типы");
 
@@ -68,8 +66,6 @@ function Calls() {
   };
 
   useEffect(() => {
-    // setCalls(data);
-    // setTempCalls(data);
     loadCalls();
   }, []);
   const getTime = (dateString) => {
@@ -89,7 +85,6 @@ function Calls() {
       setTypeCaption("Все звонки");
       setCalls(tempCalls);
     }
-    console.log(calls);
   };
   const handleButtonClick = (event) => {
     if (anchorEl === event.currentTarget) {
@@ -151,7 +146,7 @@ function Calls() {
                         sx={{ opacity: 0.87 }}
                         noWrap
                       >
-                        {typeCaption} Все типы
+                        {typeCaption}
                       </Typography>
 
                       <RiArrowDropDownLine color="#ADBFDF" />
