@@ -268,10 +268,11 @@ function Calls() {
         </AppBar>
         <Paper
           sx={{
-            paddingLeft: "15px",
             background: "#FFFFFF",
             boxShadow: "0px 4px 5px #E9EDF3",
             borderRadius: "8px",
+            mb: "50px",
+            paddingLeft: "15px",
           }}
         >
           <Table>
@@ -288,9 +289,9 @@ function Calls() {
                 </TableCell>
               </TableRow>
             </TableHead>
-            <TableBody>
+            <TableBody sx={{ paddingLeft: "15px" }}>
               {calls.map((item, index) => (
-                <TableRow key={index}>
+                <TableRow key={index} hover={true}>
                   <TableCell>
                     {item.in_out ? (
                       <MdCallReceived
